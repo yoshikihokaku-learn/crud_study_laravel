@@ -4,16 +4,28 @@
         <h1>削除確認画面</h1>
         <form action="{{ route('destroy', ['id'=>$driver->id]) }}" method="post">
             @csrf
-            <label for="">ドライバー名</label>
-            <p>{{$driver->name}}</p>
-            <label for="">国籍</label>
-            <p>{{$driver->country}}</p>
-            <label for="">カーNo.</label>
-            <p>{{$driver->car_number}}</p>
-            <label for="">チーム</label>
-            <p>{{$team->name}}</p>
-            <input type="submit" value="削除" class="btn btn-danger">
-            <a href="{{ route('drivers') }}" class="btn btn-secondary">戻る</a>
+            <table class="table table-bordered ">
+                <tr>
+                    <th scope="row">ドライバー名</th>
+                    <td>{{$driver->name}}</td>
+                </tr>
+                <tr>
+                    <th>国籍</th>
+                    <td>{{$driver->country}}</td>
+                </tr>
+                <tr>
+                    <th>カーNo.</th>
+                    <td>{{$driver->car_number}}</td>
+                </tr>
+                <tr>
+                    <th>チーム</th>
+                    <td>{{$team->name}}</td>
+                </tr>
+            </table>
+            <div style="text-align: center">
+                <input type="submit" value="削除" class="btn btn-danger">
+                <a href="{{ route('drivers') }}" class="btn btn-secondary">戻る</a>
+            </div>
         </form>
     </div>
 </div>
