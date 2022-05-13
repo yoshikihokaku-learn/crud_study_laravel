@@ -27,6 +27,7 @@
             </div>
             
             <input type="submit" value="追加" class="btn btn-primary">
+            <a href="{{ route('drivers') }}" class="btn btn-secondary">戻る</a>
         </form>
     </div>
 </div>

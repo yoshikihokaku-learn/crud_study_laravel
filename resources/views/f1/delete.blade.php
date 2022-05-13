@@ -13,7 +13,7 @@
             <label for="">チーム</label>
             <p>{{$team->name}}</p>
             <input type="submit" value="削除" class="btn btn-danger">
-            <a href="{{ route('drivers') }}" class="btn">戻る</a>
+            <a href="{{ route('drivers') }}" class="btn btn-secondary">戻る</a>
         </form>
     </div>
 </div>
