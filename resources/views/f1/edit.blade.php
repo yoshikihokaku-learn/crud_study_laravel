@@ -27,8 +27,10 @@
                     @endforeach
                 </select>
             </div>
-            <input type="submit" value="変更" class="btn btn-success">
-            <a href="{{ route('drivers') }}" class="btn btn-secondary">戻る</a>
+            <div style="text-align: center">
+                <input type="submit" value="変更" class="btn btn-success">
+                <a href="{{ route('drivers') }}" class="btn btn-secondary">戻る</a>
+            </div>
         </form>
     </div>
 </div>
