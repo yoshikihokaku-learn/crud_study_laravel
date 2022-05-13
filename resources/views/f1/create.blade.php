@@ -4,20 +4,29 @@
         <h1>ドライバー追加画面</h1>
         <form action="{{ route('store') }}" method="post">
             @csrf
-            <label for="">ドライバー名</label>
-            <input type="text" name="name">
-            <label for="">国籍</label>
-            <input type="text" name="country">
-            <label for="">カーNo.</label>
-            <input type="text" name="carNo">
-            <label for="">チーム</label>
-            <select name="team">
-                <option value="">~~ Select your team ~~</option>
-                @foreach ($teams as $t)
-                    <option value="{{$t->id}}">{{$t->name}}</option>
-                @endforeach
-            </select>
-            <input type="submit" value="追加" class="btn">
+            <div class="mb-3">
+                <label for="name" class="form-label">ドライバー名</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="country" class="form-label">国籍</label>
+                <input type="text" name="country" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="carNo" class="form-label">カーNo.</label>
+                <input type="text" name="carNo" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="team">チーム</label>
+                <select name="team" class="form-select">
+                    <option value="">~~ Select your team ~~</option>
+                    @foreach ($teams as $t)
+                        <option value="{{$t->id}}">{{$t->name}}</option>
+                    @endforeach
+                </select>
+            </div>
+            
+            <input type="submit" value="追加" class="btn btn-primary">
         </form>
     </div>
 </div>
